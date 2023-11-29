@@ -40,6 +40,7 @@ npm start
 
 ## Screenshots
 ![image](https://github.com/YashSen27/todo-app-main/assets/111111808/316cfa9f-e5e5-4b3b-9abc-d7414431254e)
+
 ![image](https://github.com/YashSen27/todo-app-main/assets/111111808/af341671-0192-43ed-a398-2e8fd65c1dd6)
 
 
