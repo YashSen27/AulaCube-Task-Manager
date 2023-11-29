@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+
+:root {
+    --background-color:  rgb(203, 167, 167);
+    --project-color: rgb(232, 198, 198);
+    --text-color: darkslategray;
+    --button-color: #101820;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    user-select: none;
+    font-size: 27px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 15vh;
+    padding-left:40px;
+    font-size: 60px;
+    color: var(--text-color);
+    font-family: 'Montserrat', cursive;
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-sticker {
+    width: 55px;
+    height: 55px;
+    align-self: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    padding-top: 20px;
+    min-height: 70vh;
+}
+
+.no-projects-card {
+    background-color: white;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 26px;
+    border: 2.5px solid gainsboro;
+    border-radius: 15px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#no-projects-card-button {
+    position: unset;
+    height: 40px;
+    width: 100px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project {
+    border-radius: 15px;
+    height: fit-content;
+    padding: 10px;
+    background-color: white;
+    border: 2.5px solid gainsboro;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.project-title {
+    width: 83%;
+    border-radius: 5px;
+}
+
+.project-title:focus,
+.todo-title:focus,
+.todo-description:focus,
+.todo-due-date:focus {
+    outline: 2px solid cornflowerblue;
+}
+
+.project-header-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 16%;
+}
+
+.project-delete-button,
+.add-new-todo {
+    font-size: 33px;
+}
+
+.todo {
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-top: 2px solid gainsboro;
+}
+
+.title-container {
+    width: 70%;
+}
+
+.title-header {
+    font-weight: bold;
+}
+
+.todo-title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 19px;
+    border-radius: 5px;
+}
+
+.unexpanded-todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unexpanded-todo-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.expand-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.expanded-todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 10px;
+}
+
+.description-title,
+.priority-title,
+.due-date-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.todo-description,
+.todo-due-date {
+    border-radius: 5px;
+}
+
+.remaining-time-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.priority-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priority-buttons-container {
+    display: flex;
+    width: 23%;
+    justify-content: space-evenly;
+}
+
+.priority-buttons {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid var(--button-color);
+}
+
+.selected-priority {
+    background-color: var(--button-color);
+    color: white;
+}
+
+.priority-icon-container {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    border-radius: 50px;
+}
+
+.new-project-button {
+    position: fixed;
+    bottom: 70px; 
+    right: 110px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: white;
+    height: 60px;
+    width: 250px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+footer {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 33px;
+    color: var(--text-color);
+}
+
+.fa-github {
+    color: var(--button-color);
+    font-size: 55px;
+    transition: 0.15s ease;
+}
+
+.fa-github:hover {
+    transform: scale(1.2);
+}
